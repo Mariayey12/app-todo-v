@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand"><img src="../assets/images/logonuevo.png" width="120px" padin/></a>
+      <a class="navbar-brand"><img src="../assets/images/logonuevo1.png" width="120px" padin/></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -21,8 +21,7 @@
              <router-link class="nav-link" to="/home"><img src="../assets/images/diitribucion.png" width="130px"/></router-link>
                <router-link class="nav-link" to="/home"><img src="../assets/images/cerrar.png" width="130px"/></router-link>
          
-          <router-link class="nav-link" to="/login" active-class="">Logueo</router-link>
-          <router-link class="nav-link" to="/register">Register</router-link>
+      
 
         </div>
         <span class="nav-item dropdown">

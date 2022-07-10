@@ -1,4 +1,5 @@
 <template>
+
   <div>
    
     <div v-if="totalitems != totalLoaded" class="loading">Loading&#8230;</div>
@@ -6,8 +7,55 @@
       <div class="px-4 py-5 my-5 text-center">
     <img class="mb-4" src="../../assets/images/fondo.png"   width="1000" height="200" />
    
+
    
-    <p class="mt-5 mb-3 text-muted">&copy; Maria Martinez 2022</p>
+   
+    <label class="accordion-wrapper">
+  <input type="checkbox" class="accordion" hidden />
+  <div class="title">
+    <strong>Pure CSS Accordion</strong>
+    <svg viewBox="0 0 256 512" width="12" title="angle-right" class="side-icon" fill="white">
+      <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+    </svg>
+    <svg viewBox="0 0 320 512" height="24" title="angle-down" class="down-icon" fill="white">
+      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+    </svg>
+  </div>
+  <div class="content">
+    <p>Content</p>
+  </div>
+</label>
+<label class="accordion-wrapper">
+   
+  <input type="radio" id="rd1" name="rd"  class="accordion" hidden />
+  <div class="title">
+    <strong>Accordion 2</strong>
+    <svg viewBox="0 0 256 512" width="12" title="angle-right" class="side-icon" fill="white">
+      <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+    </svg>
+    <svg viewBox="0 0 320 512" height="24" title="angle-down" class="down-icon" fill="white">
+      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+    </svg>
+  </div>
+  <div class="content">
+    <p>Content 2</p>
+  </div>
+</label>
+<label class="accordion-wrapper">
+  <input type="checkbox" class="accordion" hidden />
+  <div class="title">
+    <strong>Accordion 3</strong>
+    <svg viewBox="0 0 256 512" width="12" title="angle-right" class="side-icon" fill="white">
+      <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+    </svg>
+    <svg viewBox="0 0 320 512" height="24" title="angle-down" class="down-icon" fill="white">
+      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+    </svg>
+  </div>
+  <div class="content">
+    <p>Content 3</p>
+  </div>
+</label>
   </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
       <div
@@ -32,6 +80,7 @@
       </div>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -127,6 +176,68 @@ export default {
 </script>
 
 <style scoped>
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  padding: 24px;
+}
+
+.accordion-wrapper {
+  display: block;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.accordion + .title {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background: #cad7e0;
+}
+
+.accordion ~ .title strong {
+  line-height: 24px;
+  color: white;
+}
+
+.accordion ~ .title .side-icon {
+  display: block;
+}
+
+.accordion:checked ~ .title .side-icon {
+  display: none;
+}
+
+.accordion ~ .title .down-icon {
+  display: none;
+}
+
+.accordion:checked ~ .title .down-icon {
+  display: block;
+}
+
+.accordion ~ .content {
+  display: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.accordion:checked ~ .content {
+  display: block;
+}
 
 .loading {
   position: fixed;
