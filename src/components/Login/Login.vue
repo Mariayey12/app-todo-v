@@ -18,7 +18,7 @@
         <div class="form-floating">
           <input
             type="password"
-            class="form-control"
+            class="form-control text-success"
             id="floatingPassword"
             placeholder="Password"
             v-model="password"
@@ -26,12 +26,12 @@
           <label for="floatingPassword">Password</label>
         </div>
 
-        <div class="checkbox mb-3">
+        <div class="checkbox mb-3 ">
           <router-link to="/forgot">
             Forgot Password?
           </router-link>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">
+        <button class="w-100 btn btn-lg btn-success" type="submit">
           Login
         </button>
         <p class="mt-5 mb-3 text-muted">&copy; Maria Martinez  2022</p>
@@ -59,7 +59,7 @@ export default {
       signInWithEmailAndPassword(auth, this.email, this.password)
         .then((res) => {
           console.log(res);
-          this.$router.push("/dashboard");
+          this.$router.push("/tarea");
         })
         .catch((err) => {
           console.log(err.message);

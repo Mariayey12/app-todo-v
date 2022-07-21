@@ -4,8 +4,8 @@ import { initializeApp } from "firebase/app";
 import VueRouter from 'vue-router';
 import Register from "./components/Register/Register.vue";
 import Login from "./components/Login/Login.vue";
-import Dashboard from "./components/Dashboard/Dashboard.vue";
-import UploadFile from "./components/UploadFile/UploadFile.vue";
+
+import  Tarea from "./components/Tarea/TodoList.vue";
 import Home from "./components/Home/Home.vue";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword.vue";
 
@@ -33,11 +33,12 @@ initializeApp(firebaseConfig);
 
 
 const routes = [
-  {path:"/", component: Home},
+  {path:"/", component: Home}, 
+   {path:"/tarea", component: Tarea},
   {path:"/register", component: Register},
   {path:"/login", component: Login},
-  {path:"/dashboard", component: Dashboard},
-  {path:"/upload", component:UploadFile},
+ 
+
   {path:"/home", component :Home},
   {path:"/forgot", component: ForgotPassword}
 ];

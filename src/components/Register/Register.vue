@@ -25,7 +25,7 @@
           />
           <label for="floatingPassword">Password</label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">
+        <button class="w-100 btn btn-lg btn-success" type="submit">
           Register
         </button>
         

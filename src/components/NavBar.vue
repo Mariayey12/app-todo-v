@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand"><img src="../assets/images/logonuevo1.png" width="120px" padin/></a>
+      <a class="navbar-brand"
+        ><img src="../assets/images/logonuevo1.png" width="120px" padding='90'
+      /></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,18 +17,41 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-link" to="/home"><img src="../assets/images/nnnn.png" width="140px"/></router-link>
-          <router-link class="nav-link" to="/home"><img src="../assets/images/Acerca.png" width="130px"/></router-link>
-           <router-link class="nav-link" to="/home"><img src="../assets/images/detalle.png" width="130px"/></router-link>
-             <router-link class="nav-link" to="/home"><img src="../assets/images/diitribucion.png" width="130px"/></router-link>
-               <router-link class="nav-link" to="/home"><img src="../assets/images/cerrar.png" width="130px"/></router-link>
-         
-      
-
+          <router-link class="nav-link text-success" to="/tarea">
+            <span>
+              <i class="far fa-check-circle"></i>
+              <h9>Estate Tasks</h9>
+            </span>
+          </router-link>
+          <hr>
+          <router-link class="nav-link" to="/home">
+            <span>
+              <i class="far fa-check-circle"></i>
+              <h7>Estate Accounting</h7>
+            </span>
+          </router-link><hr>
+          <router-link class="nav-link" to="/home">
+            <span>
+              <i class="far fa-check-circle"></i>
+              <h9>Estate Details</h9>
+            </span>
+          </router-link><hr>
+          <router-link class="nav-link" to="/home">
+            <span>
+              <i class="far fa-check-circle"></i>
+              <h9>Estate Distribution</h9>
+            </span>
+          </router-link><hr>
+          <router-link class="nav-link" to="/home">
+            <span>
+              <i class="far fa-check-circle"></i>
+              <h7>Estate Closure</h7>
+            </span>
+          </router-link><hr>
         </div>
         <span class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle text-success"
             href="#"
             id="navbarDropdown"
             role="button"
@@ -35,15 +60,13 @@
             @click="mostrarNombre()"
           >
             Perfil
-            <img
-              id="icon"
-              class=""
-              
-            />
+            <img id="icon" class=" " />
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item disabled">{{user}}</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item disabled ">{{ user }}</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
             <li>
               <a @click="signOut()" class="dropdown-item" href="#"
                 >Close Session</a
@@ -61,11 +84,11 @@ import { getAuth } from "firebase/auth";
 import Swal from "sweetalert2";
 export default {
   name: "NavBar",
-  data () {
+  data() {
     return {
-      auth : "",
-      user:""
-    }
+      auth: "",
+      user: "",
+    };
   },
   methods: {
     signOut() {
@@ -96,10 +119,10 @@ export default {
       const auth = getAuth();
       if (auth.currentUser != null) {
         this.user = auth.currentUser.email;
-      }else {
+      } else {
         this.user = "";
       }
-    }
+    },
   },
 };
 </script>
