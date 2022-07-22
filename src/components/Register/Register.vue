@@ -27,6 +27,10 @@
         </div>
         <button class="w-100 btn btn-lg btn-success" type="submit">
           Register
+           <router-link to="/login" class="btn btn-outline-success btn-lg px-4"
+          >Login</router-link
+        >
+        
         </button>
         
       </form>
