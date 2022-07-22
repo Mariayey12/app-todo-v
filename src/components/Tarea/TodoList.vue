@@ -101,7 +101,7 @@
                       <!--   <i class="fas fa-check-circle"></i> -->
                     </span>
 
-                    {{ tarea.nombre }}
+                    {{ tarea.nombre }}  
                     <span
                       class="text-danger cursor"
                       v-on:click="eliminarTarea(index)"
@@ -128,7 +128,6 @@ export default {
   data() {
     return {
       tarea: " ",
-
       listTareas: [],
       tasks: [],
     };
@@ -138,6 +137,7 @@ export default {
     agregarTarea() {
       const tarea = {
         nombre: this.tarea,
+      
         estado: false,
       };
       localStorage.setItem("gym-vue", JSON.stringify(this.listTareas));

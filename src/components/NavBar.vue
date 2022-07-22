@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand"
-        ><img src="../assets/images/logonuevo1.png" width="120px" padding='90'
+        ><img src="../assets/images/logonuevo1.png" width="120px" padding="90"
       /></a>
       <button
         class="navbar-toggler"
@@ -23,31 +23,35 @@
               <h9>Estate Tasks</h9>
             </span>
           </router-link>
-          <hr>
+          <hr />
           <router-link class="nav-link" to="/home">
             <span>
               <i class="far fa-check-circle"></i>
               <h7>Estate Accounting</h7>
             </span>
-          </router-link><hr>
+          </router-link>
+          <hr />
           <router-link class="nav-link" to="/home">
             <span>
               <i class="far fa-check-circle"></i>
               <h9>Estate Details</h9>
             </span>
-          </router-link><hr>
+          </router-link>
+          <hr />
           <router-link class="nav-link" to="/home">
             <span>
               <i class="far fa-check-circle"></i>
               <h9>Estate Distribution</h9>
             </span>
-          </router-link><hr>
+          </router-link>
+          <hr />
           <router-link class="nav-link" to="/home">
             <span>
               <i class="far fa-check-circle"></i>
               <h7>Estate Closure</h7>
             </span>
-          </router-link><hr>
+          </router-link>
+          <hr />
         </div>
         <span class="nav-item dropdown">
           <a
@@ -60,11 +64,11 @@
             @click="mostrarNombre()"
           >
             Perfil
-            <img id="icon" class=" " />
+            <img id="icon" class="text-success" />
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item disabled ">{{ user }}</a>
+              <a class="dropdown-item disabled">{{ user }}</a>
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li>

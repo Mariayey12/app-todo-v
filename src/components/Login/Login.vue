@@ -26,7 +26,7 @@
           <label for="floatingPassword">Password</label>
         </div>
 
-        <div class="checkbox mb-3 ">
+        <div class="checkbox mb-3  text-success">
           <router-link to="/forgot">
             Forgot Password?
           </router-link>
