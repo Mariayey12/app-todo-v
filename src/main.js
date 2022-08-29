@@ -27,11 +27,6 @@ const firebaseConfig = {
 // Initialize Firebase
 initializeApp(firebaseConfig);
 
-
-
-
-
-
 const routes = [
   {path:"/", component: Home}, 
    {path:"/tarea", component: Tarea},

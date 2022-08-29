@@ -26,12 +26,12 @@
           <label for="floatingPassword">Password</label>
         </div>
 
-        <div class="checkbox mb-3  text-success">
+        <div class="checkbox mb-3  text-primary">
           <router-link to="/forgot">
             Forgot Password?
           </router-link>
         </div>
-        <button class="w-100 btn btn-lg btn-success" type="submit">
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
           Login
         </button>
         <p class="mt-5 mb-3 text-muted">&copy; Maria Martinez  2022</p>

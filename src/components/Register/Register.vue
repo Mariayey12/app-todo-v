@@ -25,11 +25,12 @@
           />
           <label for="floatingPassword">Password</label>
         </div>
-        <button class="w-100 btn btn-lg btn-success" type="submit">
-          Register
+        <button class="w-100 btn btn-lg btn-light" type="submit">
+           <router-link to="/register" class="btn btn-outline-success btn-lg px-4"
+          > Register</router-link> 
+          
            <router-link to="/login" class="btn btn-outline-success btn-lg px-4"
-          >Login</router-link
-        >
+          >Login</router-link >
         
         </button>
         

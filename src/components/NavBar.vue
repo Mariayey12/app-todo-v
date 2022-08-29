@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand"
-        ><img src="../assets/images/logonuevo1.png" width="120px" padding="90"
+        ><img src="../assets/images/logonuevo1.png" width="100px" padding="90"
       /></a>
       <button
         class="navbar-toggler"

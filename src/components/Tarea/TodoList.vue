@@ -1,9 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
     <div class="task-list">
-      <div class="px-5 py-30 my-150 text-center image-1" margin-top="900"  >
+      <div class="px-5 py-30 my-150 text-center image-1" margin-top="900">
         <img
           src="../../assets/images/ultimo .png"
           width="190px"
@@ -29,49 +28,52 @@
                     <h6>These are your immediate steps to complete</h6>
                   </div>
                 </div>
+
                 <h3>{{ tasks.length }} Tasks</h3>
 
-                <div class="input-group d-flex justify-content-end">
-                  <ul class="list">
-                    <li
-                      class="task"
-                      v-for="(task, i) in tasks"
-                      :key="'task' + i"
-                      :class="{ completed: task.completed }"
-                      @click="completeTask(task.text)"
-                    >
-                      {{ task.text }}
-                    </li>
-                  </ul> 
-                      <div class="input-group d-flex justify-content-end">
-                  <select
-                    class="form-select text-success"
-                    aria-label="Default select example"
+                <ul class="list">
+                  <li
+                    class="task"
+                    v-for="(task, i) in tasks"
+                    :key="'task' + i"
+                    :class="{ completed: task.completed }"
+                    @click="completeTask(task.text)"
                   >
-                    <option selected>show All Tasks</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                 
-                  <input width="100px" padding='90'
-
-                    type="text"
-                    v-model="tarea"
-                    class="form control form control-lg-1 "
-                    placeholder="Agregar Tarea"
-                     
-                  />
-
-                  <div class="input-group-append">
-                    <button
-                      v-on:click="agregarTarea()"
-                      class="btn btn-success btn-lg"
+                    {{ task.text }}
+                  </li>
+                </ul>
+                <div class="input-group d-flex justify-content-end">
+                  <div class="input-group d-flex justify-content-end">
+                    <select
+                      class="form-select text-success"
+                      aria-label="Default select example"
                     >
-                      Add a task
-                    </button>
+                      <option selected>show All Tasks</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+
+                    <input
+                      width="100px"
+                      padding="90"
+                      type="text"
+                      v-model="tarea"
+                      class="form control form control-lg-1"
+                      placeholder="Agregar Tarea"
+                      id="task"
+                    />
+
+                    <div class="input-group-append">
+                      <button
+                        v-on:click="agregarTarea()"
+                        class="btn btn-success btn-lg"
+                      >
+                        Add a task
+                      </button>
+                    </div>
                   </div>
-                </div> </div>
+                </div>
 
                 <br />
 
@@ -101,7 +103,7 @@
                       <!--   <i class="fas fa-check-circle"></i> -->
                     </span>
 
-                    {{ tarea.nombre }}  
+                    {{ tarea.nombre }}
                     <span
                       class="text-danger cursor"
                       v-on:click="eliminarTarea(index)"
@@ -137,7 +139,7 @@ export default {
     agregarTarea() {
       const tarea = {
         nombre: this.tarea,
-      
+
         estado: false,
       };
       localStorage.setItem("gym-vue", JSON.stringify(this.listTareas));
@@ -151,6 +153,15 @@ export default {
     editarTarea(tarea, index) {
       this.listTareas[index].estado = !tarea.estado;
       localStorage.setItem("gym-vue", JSON.stringify(this.listTareas));
+    },
+    createTask() {
+      let task = {
+        text: this.newTask,
+        completed: false,
+      };
+      this.tasks.push(task);
+      this.newTask = "";
+      console.log(this.tasks);
     },
   },
   created: function () {
@@ -218,14 +229,7 @@ body {
   border-radius: 50;
 
   background-color: #f6f5f5;
-   width:200;
-    padding:90;
-
+  width: 200;
+  padding: 90;
 }
 </style>
-
-
-
-
-
-
